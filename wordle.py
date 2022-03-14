@@ -7,7 +7,8 @@ OKGREEN = '\033[92m'
 
 class Wordle:
     def __init__(self, hint:bool=False) -> None:
-        self.word = choice(wordlist)
+        self.words = wordlist
+        self.word = choice(self.words)
         self.board = [["_" for _ in range(5)] for _ in range(6)]
         
         if hint:
